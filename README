@@ -1,0 +1,26 @@
+Authored by: Ali Drawy
+ID:211556493
+Exercise name: chatServer.c
+submitted files: chatServer.c and README
+
+summary:
+In this exercise i made a chat between multiple servers without using threads 
+by using select one time 
+
+chatServer.c : contain the server code
+README:the file that contain  the description of the chatServer.c
+
+the functions :
+
+1-intHandler: i call this function when the welcome socket write a ^c to stop the code so i can make free to the data 
+2- init_pool: make initalize to the pool 
+3-add_conn: add a new connection(new client) to the link list in the pool 
+4-remove_conn : remove a  connection( client) from the link list in the pool 
+5-add_msg:Add msg to the queues of all connections except of the origin
+6-write_to_client:Write all the messages  to client
+
+compiling :
+gcc chatServer.c -o chatServer
+./ chatServer <port>
+
+
